@@ -1,0 +1,43 @@
+/* Applies to the entire body of the HTML document (except where overridden by more specific
+selectors). */
+
+body {
+    padding: 0;
+    margin: 0;
+    font-size: 120%;
+}
+
+button, input {
+    font-size: 100%;
+}
+
+div.page {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr 8fr 1fr;
+    grid-template-areas: 'meny header' 
+                         'meny innhold' 
+                         'footer footer';
+}
+
+div.header {
+    grid-area: header;
+}
+
+div.meny {
+    grid-area: meny;
+}
+
+div.innhold {
+    grid-area: innhold;
+}
+
+div.footer {
+    grid-area: footer;
+}
+  /* Applies to all elements with <... class="someclass"> specified. */
+  .someclass { color: red; }
+  
+  /* Applies to the element with <... id="someid"> specified. */
+  #someid { color: green; }
