@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Handlelistex</title>
+    <link rel="stylesheet" href="css/handlelistex.css" />
+    <script src="js/model.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/varer.js"></script>
+    <script src="js/handleliste.js"></script>
+</head>
+<body>
+    <div class="page" id="page">
+        <div class="header" id="header">
+            <button onclick="visOgSkjulMeny()">☰</button> 
+            Handlelistex 🍷
+        </div>
+        <div class="innhold" id="innhold"></div>
+        <div class="meny" id="meny">
+            <button class="fixed" id=buttonVarer onclick="visVareliste()">Varer</button><br />
+            <button class="fixed" id=buttonHandleliste onclick="visHandleliste()">Handleliste</button><br/>
+            <button onclick="alert('Hei, ' + this.innerHTML + '!')">Per</button>
+            <button onclick="alert(this.innerHTML = 'x')">Hei!</button>
+            <button onclick="alert(this.innerHTML)">Hallo!</button>
+            <button class="fixed">Om</button><br />
+            <button class="fixed">Exit</button><br />
+        </div>
+    </div>
+    <input id="navn" type="text", value="Hallo">
+</body>
+</html>

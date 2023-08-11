@@ -1,0 +1,73 @@
+/* Applies to the entire body of the HTML document (except where overridden by more specific
+selectors). */
+
+body {
+    padding: 0;
+    margin: 0;
+    font-size: 130%;
+}
+
+div.page {
+    background-color: lightblue;
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr 8fr 1fr;
+    grid-template-areas: 'meny header' 
+                         'meny innhold' 
+                         'meny footer';
+
+}
+
+div.pageUtenMeny {
+    grid-template-columns: 0px 2fr;
+}
+
+
+div.header {
+    grid-area: header;
+    background-color: lightcoral;
+}
+
+div.meny {
+    grid-area: meny;
+    background-color: lightseagreen;
+    overflow: hidden;
+}
+
+div.innhold {
+    grid-area: innhold;
+    background-color: lightgray;
+}
+
+div.footer {
+    grid-area: footer;
+    background-color: blanchedalmond;
+}
+
+/*Tagg for responsivt webdesign*/
+@media only screen and (max-width: 600px) {
+    div.page {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 5fr 1fr;
+        grid-template-areas: 'header' 
+                             'meny'
+                             'innhold'
+                             'footer';
+    }
+}
+
+p.fetSkrift {
+        color: blue;
+        background-color: aqua;
+        font-style:italic;
+}
+
+button, input {
+    font-size: 100%;
+}
+  /* Applies to all elements with <... class="someclass"> specified. */
+  .someclass { color: red; }
+  
+  /* Applies to the element with <... id="someid"> specified. */
+  #someid { color: green; }
